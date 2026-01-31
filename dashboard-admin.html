@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Data Recovery Portal</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF', 50: '#eff6ff', 100: '#dbeafe', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' },
+                        secondary: { DEFAULT: '#059669', 50: '#ecfdf5', 600: '#059669' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-dark-text transition-colors duration-300 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-slate-900 text-slate-300 flex-col z-20 hidden md:flex">
+            <!-- Logo -->
+            <div class="p-6 border-b border-slate-800">
+                <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-white">
+                    <i class="fa-solid fa-user-shield text-emerald-500 text-2xl"></i>
+                    <span>AdminPanel</span>
+                </a>
+            </div>
+
+            <!-- Nav -->
+            <nav class="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+                <div class="px-3 mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Overview</div>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 bg-primary-600 text-white rounded-lg font-medium shadow-lg shadow-primary-900/50">
+                    <i class="fa-solid fa-chart-line w-5 text-center"></i> Dashboard
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition">
+                    <i class="fa-solid fa-folder-tree w-5 text-center"></i> All Cases
+                    <span class="ml-auto text-xs bg-slate-700 px-2 py-0.5 rounded-full">47</span>
+                </a>
+
+                <div class="px-3 mt-6 mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Management
+                </div>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition">
+                    <i class="fa-solid fa-users w-5 text-center"></i> Clients
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition">
+                    <i class="fa-solid fa-user-doctor w-5 text-center"></i> Technicians
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition">
+                    <i class="fa-solid fa-calendar-days w-5 text-center"></i> Schedule
+                </a>
+
+                <div class="px-3 mt-6 mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Finance</div>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition">
+                    <i class="fa-solid fa-file-invoice-dollar w-5 text-center"></i> Billing
+                </a>
+            </nav>
+
+            <!-- Bottom Actions -->
+            <div class="p-4 border-t border-slate-800">
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-2 text-sm text-slate-400 hover:text-white transition hover:bg-slate-800 rounded-lg">
+                    <i class="fa-solid fa-right-from-bracket w-5 text-center"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-dark-bg">
+
+            <!-- Mobile Header -->
+            <header class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center sticky top-0 z-30">
+                <span class="font-bold">AdminPanel</span>
+                <button class="text-white text-xl"><i class="fa-solid fa-bars"></i></button>
+            </header>
+
+            <!-- Top Utility Bar -->
+            <div
+                class="hidden md:flex justify-between items-center p-6 bg-white dark:bg-dark-card border-b border-slate-200 dark:border-slate-700 sticky top-0 z-10">
+                <h1 class="text-2xl font-bold dark:text-white">Admin Dashboard</h1>
+                <div class="flex items-center gap-6">
+                    <button class="theme-toggle text-slate-500 hover:text-primary-600 dark:text-yellow-400 text-xl">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                    <div class="flex items-center gap-3 pl-6 border-l border-slate-200 dark:border-slate-700">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=334155&color=fff" alt="Admin"
+                            class="w-8 h-8 rounded-full">
+                        <span class="text-sm font-semibold dark:text-white">System Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="p-4 md:p-8 space-y-8">
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Stat 1 -->
+                    <div
+                        class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Total Active Cases
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">47</h3>
+                            <span
+                                class="text-emerald-500 text-sm font-bold bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">+5
+                                this week</span>
+                        </div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div
+                        class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">In Diagnosis</div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">12</h3>
+                            <span
+                                class="text-amber-500 text-sm font-bold bg-amber-50 dark:bg-amber-900/30 px-2 py-1 rounded">High
+                                Load</span>
+                        </div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div
+                        class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Monthly Revenue</div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">$45.8k</h3>
+                            <span
+                                class="text-emerald-500 text-sm font-bold bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">+12%</span>
+                        </div>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div
+                        class="bg-white dark:bg-dark-card p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Pending Approval</div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">8</h3>
+                            <span class="text-slate-400 text-sm font-bold  px-2 py-1 ">$2.4k value</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority Alerts -->
+                <div
+                    class="bg-rose-50 dark:bg-red-900/10 border border-rose-100 dark:border-rose-900/30 rounded-xl p-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4 text-rose-700 dark:text-rose-300">
+                        <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                        <span class="font-semibold">3 Emergency Cases require immediate attention</span>
+                    </div>
+                    <button class="text-sm font-bold text-rose-700 dark:text-rose-300 hover:underline">View
+                        Cases</button>
+                </div>
+
+                <!-- Main Tables Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- Table: Urgent Cases -->
+                    <div
+                        class="lg:col-span-2 bg-white dark:bg-dark-card rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="p-6 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
+                            <h3 class="font-bold text-lg dark:text-white">Priority Queue</h3>
+                            <button class="text-sm text-primary-600 font-semibold">View All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm">
+                                <thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400">
+                                    <tr>
+                                        <th class="p-4">Case #</th>
+                                        <th class="p-4">Client</th>
+                                        <th class="p-4">Type</th>
+                                        <th class="p-4">Deadline</th>
+                                        <th class="p-4">Status</th>
+                                        <th class="p-4"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+                                    <tr>
+                                        <td
+                                            class="p-4 font-semibold hover:text-primary-600 cursor-pointer dark:text-white">
+                                            #9821</td>
+                                        <td class="p-4 dark:text-slate-300">Acme Corp</td>
+                                        <td class="p-4 text-slate-500">RAID 5</td>
+                                        <td class="p-4 text-red-500 font-bold">4 Hours</td>
+                                        <td class="p-4"><span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs dark:bg-blue-900/30 dark:text-blue-300">Recovering</span>
+                                        </td>
+                                        <td class="p-4 text-right"><i
+                                                class="fa-solid fa-ellipsis-vertical text-slate-400 cursor-pointer"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="p-4 font-semibold hover:text-primary-600 cursor-pointer dark:text-white">
+                                            #9824</td>
+                                        <td class="p-4 dark:text-slate-300">John Doe</td>
+                                        <td class="p-4 text-slate-500">SSD</td>
+                                        <td class="p-4 text-amber-500 font-bold">Tomorrow</td>
+                                        <td class="p-4"><span
+                                                class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs dark:bg-purple-900/30 dark:text-purple-300">Analyzing</span>
+                                        </td>
+                                        <td class="p-4 text-right"><i
+                                                class="fa-solid fa-ellipsis-vertical text-slate-400 cursor-pointer"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="p-4 font-semibold hover:text-primary-600 cursor-pointer dark:text-white">
+                                            #9820</td>
+                                        <td class="p-4 dark:text-slate-300">Legal Firm LLC</td>
+                                        <td class="p-4 text-slate-500">HDD</td>
+                                        <td class="p-4 text-slate-500">Jan 30</td>
+                                        <td class="p-4"><span
+                                                class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs dark:bg-emerald-900/30 dark:text-emerald-300">QC
+                                                Check</span></td>
+                                        <td class="p-4 text-right"><i
+                                                class="fa-solid fa-ellipsis-vertical text-slate-400 cursor-pointer"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Widget: Team Performance -->
+                    <div
+                        class="bg-white dark:bg-dark-card rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-6">
+                        <h3 class="font-bold text-lg dark:text-white mb-6">Technician Status</h3>
+
+                        <div class="space-y-6">
+                            <!-- Tech 1 -->
+                            <div class="flex items-center gap-4">
+                                <div class="relative">
+                                    <img src="https://ui-avatars.com/api/?name=Dr+Mike&background=random"
+                                        class="w-10 h-10 rounded-full">
+                                    <span
+                                        class="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-white dark:border-dark-card rounded-full"></span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-sm dark:text-white">Mike Ross</h4>
+                                    <p class="text-xs text-slate-500">3 Cases Active</p>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">98% SR</span>
+                            </div>
+
+                            <!-- Tech 2 -->
+                            <div class="flex items-center gap-4">
+                                <div class="relative">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=random"
+                                        class="w-10 h-10 rounded-full">
+                                    <span
+                                        class="absolute -bottom-1 -right-1 w-3 h-3 bg-amber-500 border-2 border-white dark:border-dark-card rounded-full"></span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-sm dark:text-white">Sarah Lee</h4>
+                                    <p class="text-xs text-slate-500">1 Case (Emergency)</p>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">99% SR</span>
+                            </div>
+
+                            <!-- Tech 3 -->
+                            <div class="flex items-center gap-4">
+                                <div class="relative">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-500 text-xs font-bold">
+                                        JP</div>
+                                    <span
+                                        class="absolute -bottom-1 -right-1 w-3 h-3 bg-slate-400 border-2 border-white dark:border-dark-card rounded-full"></span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-sm dark:text-white">James P.</h4>
+                                    <p class="text-xs text-slate-500">Offline</p>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">-</span>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full mt-8 py-2 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-semibold rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition">View
+                            Full Schedule</button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

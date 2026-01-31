@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Recovery Services - Professional & Secure Data Restoration</title>
+    <meta name="description"
+        content="Professional data recovery services with 98.7% success rate. No data, no fee guarantee. 24/7 Emergency Service.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1E40AF',
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+                            500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a',
+                        },
+                        secondary: {
+                            DEFAULT: '#059669',
+                            50: '#ecfdf5', 100: '#d1fae5', 600: '#059669', 700: '#047857',
+                        },
+                        accent: {
+                            DEFAULT: '#F59E0B',
+                            500: '#f59e0b', 600: '#d97706',
+                        },
+                        dark: {
+                            bg: '#0F172A',
+                            card: '#1E293B',
+                            text: '#F1F5F9',
+                            muted: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    container: {
+                        center: true,
+                        padding: '1rem',
+                        screens: {
+                            sm: '640px', md: '768px', lg: '1024px', xl: '1280px', '2xl': '1280px',
+                        },
+                    },
+                    plugins: [
+                        function({ addUtilities }) {
+                            addUtilities({
+                                '.rtl': {
+                                    'direction': 'rtl',
+                                },
+                                '.ltr': {
+                                    'direction': 'ltr',
+                                },
+                                '.text-right': {
+                                    'text-align': 'right',
+                                },
+                                '.text-left': {
+                                    'text-align': 'left',
+                                },
+                                '.float-right': {
+                                    'float': 'right',
+                                },
+                                '.float-left': {
+                                    'float': 'left',
+                                },
+                                '.ml-auto': {
+                                    'margin-left': 'auto',
+                                },
+                                '.mr-auto': {
+                                    'margin-right': 'auto',
+                                },
+                            })
+                        }
+                    ]
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-dark-bg dark:text-dark-text transition-colors duration-300">
+
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md shadow-sm"
+        id="main-header">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html"
+                    class="flex items-center gap-2 text-2xl font-bold text-primary-800 dark:text-blue-400">
+                    <i class="fa-solid fa-shield-halved text-3xl"></i>
+                    <span>DataRecovery</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                    <a href="index-v2.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home
+                        2</a>
+                    <a href="about.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">About</a>
+                    <a href="services.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
+                    <a href="how-it-works.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">How
+                        It Works</a>
+                    <a href="pricing.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
+                    <a href="track-case.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Track
+                        Case</a>
+                    <a href="contact.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Contact</a>
+                </nav>
+
+                <!-- Right Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="login.html"
+                        class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition text-sm font-bold">
+                        Login
+                    </a>
+                    <a href="dashboard-client.html"
+                        class="bg-primary-700 hover:bg-primary-800 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition text-sm font-bold">
+                        Dashboard
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button
+                        class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-700 dark:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-transform translate-x-full lg:hidden flex justify-end">
+        <div class="w-4/5 max-w-sm bg-white dark:bg-dark-card h-full shadow-2xl p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold dark:text-white">Menu</span>
+                <button id="close-menu-btn" class="text-2xl text-slate-500 hover:text-red-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
+                <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                <a href="index-v2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="track-case.html">Track Case</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="dashboard-client.html"
+                    class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Dashboard</a>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
+                    <span class="text-sm text-slate-500">Theme</span>
+                    <button class="theme-toggle p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        <i class="fa-solid fa-moon dark:hidden text-slate-700"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Professional data center background with blue lighting -->
+            <img src="https://images.unsplash.com/photo-1558494949-efc52728101c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Data Center Clean Room" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/70"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <div
+                class="inline-block bg-accent-600/20 border border-accent-500/50 rounded-full px-4 py-1 mb-6 animate-fade-in">
+                <span class="text-accent-400 font-semibold text-sm tracking-wide uppercase"><i
+                        class="fa-solid fa-clock mr-2"></i> 24-Hour Emergency Service Available</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight animate-fade-in delay-100">
+                Professional Data Recovery <br class="hidden md:block"> Services You Can <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Trust</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto animate-fade-in delay-200">
+                Recovering your critical data from hard drives, SSDs, RAID arrays, and more since 2010.
+                We offer free diagnostics and a "No Data, No Fee" guarantee.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-300">
+                <a href="#quick-service"
+                    class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary-500/30 transition transform hover:-translate-y-1">
+                    Get Free Evaluation
+                </a>
+                <a href="upload.html"
+                    class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock text-emerald-400"></i> Upload Files Securely
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div
+                class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto border-t border-white/10 pt-8 animate-fade-in delay-300">
+                <div>
+                    <div class="text-3xl font-bold text-emerald-400">98.7%</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Success Rate</div>
+                </div>
+                <div class="md:border-l md:border-r border-white/10">
+                    <div class="text-3xl font-bold text-blue-400">500k+</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Files Recovered</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-purple-400">ISO 5</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Clean Room Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Service Selector -->
+    <section id="quick-service" class="py-20 bg-slate-50 dark:bg-dark-bg relative -mt-10 md:-mt-16 z-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">What device needs recovery?</h2>
+                <div class="w-16 h-1 bg-primary-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Card 1 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-hard-drive text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">Hard Drive</h3>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-memory text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">SSD</h3>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-server text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">RAID Array</h3>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-usb text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">USB Drive</h3>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-sd-card text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">SD Card</h3>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="services.html"
+                    class="group bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary-900/10 transition-all duration-300 hover:-translate-y-1 text-center border border-slate-100 dark:border-slate-700">
+                    <div
+                        class="w-14 h-14 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-mobile-screen text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 dark:text-slate-100">Mobile</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white dark:bg-dark-bg border-t border-slate-100 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary-600 font-semibold tracking-wider text-sm uppercase">Our Promise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2">Why Trust Us With Your
+                    Data?</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-4">We combine industry-leading expertise with
+                    state-of-the-art facilities to ensure the highest chance of recovery.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Promise 1 -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                    <div
+                        class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">No Data, No Charge</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Our guarantee involves zero financial risk. You only
+                        pay if we successfully recover your critical files.</p>
+                </div>
+
+                <!-- Promise 2 -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                    <div
+                        class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-microscope text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">ISO 5 Clean Room</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">State-of-the-art facilities ensure your drive is
+                        opened in a certified particle-free environment.</p>
+                </div>
+
+                <!-- Promise 3 -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                    <div
+                        class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/20 text-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-shield text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">256-bit Encryption</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Your privacy is paramount. We use military-grade
+                        encryption for all data transfers and storage.</p>
+                </div>
+
+                <!-- Promise 4 -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                    <div
+                        class="w-12 h-12 bg-accent-100 dark:bg-accent-900/20 text-accent-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">Free Diagnostics</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Get a detailed analysis and fixed-price quote within
+                        24-48 hours at absolutely no cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & Case Tracking Teaser -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+                <!-- Left: How it works -->
+                <div class="lg:w-1/2">
+                    <span class="text-primary-400 font-bold uppercase tracking-wide">Process</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-8">Simple 4-Step Recovery</h2>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-900/50 border border-primary-500 font-bold flex items-center justify-center">
+                                1</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Submit Device</h4>
+                                <p class="text-slate-400 text-sm mt-1">Ship your device with our prepaid label or drop
+                                    it off at our secure facility.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-900/50 border border-primary-500 font-bold flex items-center justify-center">
+                                2</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Free Diagnosis</h4>
+                                <p class="text-slate-400 text-sm mt-1">Our experts analyze your device and provide a
+                                    fixed-price quote within 24 hours.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-900/50 border border-primary-500 font-bold flex items-center justify-center">
+                                3</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Recovery Process</h4>
+                                <p class="text-slate-400 text-sm mt-1">We recover your data using specialized tools in
+                                    our Class 100 clean rooms.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/50 border border-emerald-500 text-emerald-400 font-bold flex items-center justify-center">
+                                <i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4 class="text-xl font-bold text-emerald-400">Secure Delivery</h4>
+                                <p class="text-slate-400 text-sm mt-1">Download your data securely or receive it on an
+                                    encrypted encrypted hardware key.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Tracking Teaser -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl">
+                        <div class="text-center mb-8">
+                            <div
+                                class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                                <i class="fa-solid fa-magnifying-glass-chart text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Track Your Case</h3>
+                            <p class="text-slate-300 mt-2">Already submitted a drive? Enter your Case ID to see
+                                real-time updates.</p>
+                        </div>
+
+                        <form action="track-case.html" class="flex flex-col gap-4">
+                            <div>
+                                <label for="case-id" class="sr-only">Case ID</label>
+                                <input type="text" id="case-id" placeholder="Enter Case ID (e.g. DR-2024-X)"
+                                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500">
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                                Track My Recovery
+                            </button>
+                        </form>
+
+                        <div class="mt-6 text-center text-sm text-slate-400">
+                            <p><i class="fa-solid fa-lock mr-1"></i> Secure Client Portal Access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Our Data Recovery
+                    Services</h2>
+                <div class="w-16 h-1 bg-primary-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hard Drive Service -->
+                <div
+                    class="bg-white dark:bg-dark-card rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 group">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="https://www.provendata.com/wp-content/uploads/2023/09/How-Does-a-Hard-Drive-Data-Recovery-Service-Work-What-to-Expect-from-the-Hard-Drive-Recovery-Process.jpg"
+                            alt="HDD Recovery"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Hard Drive Recovery</h3>
+                            <i class="fa-solid fa-hard-drive text-slate-400"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Expert recovery for clicking, dead, or
+                            failing hard drives. We handle mechanical and logical failures.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-primary-600 dark:text-blue-400">From $299</span>
+                            <a href="services.html"
+                                class="text-slate-900 dark:text-white font-medium hover:text-primary-600 flex items-center gap-2">
+                                Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSD Service -->
+                <div
+                    class="bg-white dark:bg-dark-card rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 group">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="SSD Recovery"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">SSD Recovery</h3>
+                            <i class="fa-solid fa-memory text-slate-400"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Specialized techniques for NAND flash memory,
+                            controller failures, and encryption issues.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-primary-600 dark:text-blue-400">From $499</span>
+                            <a href="services.html"
+                                class="text-slate-900 dark:text-white font-medium hover:text-primary-600 flex items-center gap-2">
+                                Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAID Service -->
+                <div
+                    class="bg-white dark:bg-dark-card rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 group">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="https://th.bing.com/th/id/R.8f00875277963737978037ac9a9605ae?rik=CVBiJ8ju4p6%2fsA&riu=http%3a%2f%2fhddrecovery.ca%2fwp-content%2fuploads%2f2015%2f03%2fraid_rec_server.jpg&ehk=nbptJn17HPI6e1087%2f38X%2fZG6tYQrRuvS0ZgBhcxZt0%3d&risl=&pid=ImgRaw&r=0"
+                            alt="RAID Recovery"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">RAID/Server Recovery</h3>
+                            <i class="fa-solid fa-server text-slate-400"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Enterprise-grade recovery for RAID 0, 1, 5,
+                            10, NAS, and SAN systems with minimal downtime.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-primary-600 dark:text-blue-400">Custom Quote</span>
+                            <a href="services.html"
+                                class="text-slate-900 dark:text-white font-medium hover:text-primary-600 flex items-center gap-2">
+                                Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white dark:bg-dark-bg border-t border-slate-100 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-slate-500 mb-8 uppercase tracking-widest text-sm font-semibold">Certified &
+                Trusted By Industry Leaders</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Using Text/Icons as placeholders for logos -->
+                <div class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-certificate"></i> ISO 9001
+                </div>
+                <div class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-shield-virus"></i> SOC 2
+                    Type II</div>
+                <div class="text-2xl font-bold flex items-center gap-2"><i class="fa-brands fa-bbb"></i> BBB A+</div>
+                <div class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-lock"></i> HIPAA Compliant
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-800 to-primary-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Recover Your Data?</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Don't wait. The sooner you act, the higher the
+                chance of successful recovery. Start with a free diagnosis today.</p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-white text-primary-700 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:bg-slate-100 transition">
+                    Get Free Quote
+                </a>
+                <a href="upload.html"
+                    class="bg-transparent border-2 border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                    Upload Files Now
+                </a>
+            </div>
+            <p class="mt-6 text-sm text-blue-200"><i class="fa-solid fa-lock mr-2"></i> Your privacy is protected. All
+                uploads are encrypted.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-white mb-6">
+                        <i class="fa-solid fa-shield-halved text-primary-500"></i>
+                        <span>DataRecovery</span>
+                    </a>
+                    <p class="text-slate-400 mb-6">Professional data recovery services you can trust. We bring your lost
+                        memories and critical files back to life.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Hard Drive Recovery</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">SSD Data Recovery</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">RAID & Server</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">USB & SD Card</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Mobile Recovery</a></li>
+                        <li><a href="services.html"
+                                class="text-accent-400 hover:text-accent-300 transition font-semibold">24/7 Emergency
+                                Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-primary-400 transition">How It Works</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400 transition">Pricing & Guarantee</a>
+                        </li>
+                        <li><a href="track-case.html" class="hover:text-primary-400 transition">Track Your Case</a></li>
+                        <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary-500"></i>
+                            <span>123 Data Recovery Lane,<br>Suite 400, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-primary-500"></i>
+                            <a href="tel:8001234567" class="hover:text-white text-lg font-bold">(800) 123-4567</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-primary-500"></i>
+                            <a href="mailto:support@datarecovery.com"
+                                class="hover:text-white">support@datarecovery.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <div class="text-slate-500">
+                    &copy; 2024 DataRecovery Services. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

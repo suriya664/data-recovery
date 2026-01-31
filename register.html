@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Data Recovery Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF', 600: '#2563eb', 700: '#1d4ed8' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .register-bg {
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-white dark:bg-dark-bg text-slate-800 dark:text-dark-text min-h-screen flex transition-colors duration-300">
+
+    <!-- Left Side (Visual) -->
+    <div class="hidden lg:flex lg:w-1/2 relative register-bg flex-col justify-between p-12 text-white">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 to-blue-900/80 backdrop-blur-sm"></div>
+
+        <div class="relative z-10">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-white">
+                <i class="fa-solid fa-shield-halved text-3xl"></i>
+                <span>DataRecovery</span>
+            </a>
+        </div>
+
+        <div class="relative z-10 max-w-lg mb-12">
+            <h2 class="text-4xl font-bold mb-6">Join Thousands of Satisfied Clients</h2>
+            <ul class="space-y-4 text-lg text-blue-100">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Real-time
+                    case tracking</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Direct
+                    technician messaging</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Secure file
+                    uploads (5GB+)</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Instant
+                    quote approval</li>
+            </ul>
+        </div>
+
+        <div class="relative z-10 flex gap-4">
+            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo1" class="h-8 opacity-70">
+            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo2" class="h-8 opacity-70">
+            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo3" class="h-8 opacity-70">
+        </div>
+    </div>
+
+    <!-- Right Side (Register Form) -->
+    <div
+        class="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 lg:p-12 relative dark:bg-dark-bg overflow-y-auto">
+
+        <!-- Mobile Logo -->
+        <a href="index.html"
+            class="lg:hidden absolute top-6 left-6 text-2xl font-bold text-primary-800 dark:text-blue-400">
+            <i class="fa-solid fa-shield-halved"></i>
+        </a>
+
+        <!-- Dark Mode Toggle -->
+        <button
+            class="theme-toggle absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
+            <i class="fa-solid fa-moon dark:hidden"></i>
+            <i class="fa-solid fa-sun hidden dark:block"></i>
+        </button>
+
+        <div class="w-full max-w-md py-10">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Create Your Account</h1>
+                <p class="text-slate-600 dark:text-slate-400">Get started with secure data recovery</p>
+            </div>
+
+            <!-- Steps Progress -->
+            <div class="flex items-center justify-between mb-8 max-w-sm mx-auto">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm">
+                        1</div>
+                    <span class="text-xs mt-1 text-primary-600 font-medium">Details</span>
+                </div>
+                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                <!-- Simplified to single step view for HTML delivery, keeping design cleaner -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-sm">
+                        2</div>
+                    <span class="text-xs mt-1 text-slate-400">Verify</span>
+                </div>
+                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-sm">
+                        3</div>
+                    <span class="text-xs mt-1 text-slate-400">Done</span>
+                </div>
+            </div>
+
+            <form action="dashboard-client.html" class="space-y-5">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">First
+                            Name</label>
+                        <input type="text"
+                            class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Last
+                            Name</label>
+                        <input type="text"
+                            class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
+                            required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email
+                        Address</label>
+                    <input type="email"
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
+                        required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                    <input type="password"
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
+                        required>
+                    <div class="flex gap-1 mt-2">
+                        <div class="h-1 w-1/4 bg-red-500 rounded-full"></div>
+                        <div class="h-1 w-1/4 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                        <div class="h-1 w-1/4 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                        <div class="h-1 w-1/4 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">Must contain at least 8 characters, one number, and one
+                        symbol.</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Account
+                        Type</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="account_type" class="peer sr-only" checked>
+                            <div
+                                class="border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-center hover:bg-slate-50 dark:hover:bg-slate-800 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 peer-checked:text-primary-700 dark:peer-checked:text-primary-400 transition">
+                                <i class="fa-solid fa-user mb-1 block"></i>
+                                <span class="text-sm font-medium">Personal</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="account_type" class="peer sr-only">
+                            <div
+                                class="border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-center hover:bg-slate-50 dark:hover:bg-slate-800 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 peer-checked:text-primary-700 dark:peer-checked:text-primary-400 transition">
+                                <i class="fa-solid fa-building mb-1 block"></i>
+                                <span class="text-sm font-medium">Business</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400 mt-2">
+                    <input type="checkbox" class="mt-1 rounded text-primary-600 focus:ring-primary-500" required>
+                    <span>I agree to the <a href="#" class="text-primary-600 hover:underline">Terms of Service</a> and
+                        <a href="#" class="text-primary-600 hover:underline">Privacy Policy</a>.</span>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-primary-600/30 transition transform hover:-translate-y-0.5 mt-6">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="relative my-8">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white dark:bg-dark-bg text-slate-500">Or register with</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button
+                    class="flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 rounded-lg py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition dark:text-white">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5"> Google
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 rounded-lg py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition dark:text-white">
+                    <i class="fa-brands fa-microsoft text-blue-500 text-xl"></i> Microsoft
+                </button>
+            </div>
+
+            <div class="mt-8 text-center text-sm text-slate-600 dark:text-slate-400">
+                Already have an account?
+                <a href="login.html" class="font-bold text-primary-600 hover:text-primary-500">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

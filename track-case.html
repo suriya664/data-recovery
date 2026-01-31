@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Case - Data Recovery Case Status</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF', 600: '#2563eb', 700: '#1d4ed8' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    // RTL Support
+                    plugins: [
+                        function({ addUtilities }) {
+                            addUtilities({
+                                '.rtl': { 'direction': 'rtl' },
+                                '.ltr': { 'direction': 'ltr' },
+                                '.text-right': { 'text-align': 'right' },
+                                '.text-left': { 'text-align': 'left' },
+                                '.float-right': { 'float': 'right' },
+                                '.float-left': { 'float': 'left' },
+                                '.ml-auto': { 'margin-left': 'auto' },
+                                '.mr-auto': { 'margin-right': 'auto' },
+                            })
+                        }
+                    ]
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-dark-text transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Header (Same as Index) -->
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md shadow-sm"
+        id="main-header">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html"
+                    class="flex items-center gap-2 text-2xl font-bold text-primary-800 dark:text-blue-400">
+                    <i class="fa-solid fa-shield-halved text-3xl"></i>
+                    <span>DataRecovery</span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                    <a href="index-v2.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home
+                        2</a>
+                    <a href="services.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
+                    <a href="how-it-works.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">How
+                        It Works</a>
+                    <a href="pricing.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
+                    <a href="track-case.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Track
+                        Case</a>
+                    <a href="contact.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Contact</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="dashboard-client.html"
+                        class="bg-primary-700 hover:bg-primary-800 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition text-sm font-bold">
+                        Dashboard
+                    </a>
+                    <button
+                        class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-700 dark:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-transform translate-x-full lg:hidden flex justify-end">
+        <div class="w-4/5 max-w-sm bg-white dark:bg-dark-card h-full shadow-2xl p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold dark:text-white">Menu</span>
+                <button id="close-menu-btn" class="text-2xl text-slate-500 hover:text-red-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
+                <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                <a href="index-v2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="track-case.html">Track Case</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="dashboard-client.html"
+                    class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Dashboard</a>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
+                    <span class="text-sm text-slate-500">Theme</span>
+                    <button class="theme-toggle p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        <i class="fa-solid fa-moon dark:hidden text-slate-700"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="relative flex-grow pt-32 pb-20 overflow-hidden bg-slate-900">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Professional tracking/monitoring background -->
+            <img src="https://images.unsplash.com/photo-1550745168-9bc0fa25c3f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Case Tracking Dashboard" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/70"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h1 class="text-3xl font-bold text-white mb-4">Track Your Recovery Status</h1>
+                <p class="text-slate-300">Enter your 10-digit Case ID and the email address used
+                    during registration to see real-time updates.</p>
+            </div>
+
+            <div
+                class="max-w-xl mx-auto bg-white dark:bg-dark-card p-8 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 mb-16">
+                <!-- Tracking Form -->
+                <form id="track-form" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Case ID</label>
+                        <input type="text" placeholder="e.g. DR-12345678"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white uppercase font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email
+                            Address</label>
+                        <input type="email" placeholder="your@email.com"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                    </div>
+                    <button type="button" onclick="document.getElementById('result-area').classList.remove('hidden')"
+                        class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-lg shadow-lg transition">
+                        Check Status
+                    </button>
+                </form>
+            </div>
+
+            <!-- Mock Result Area (Hidden initially) -->
+            <div id="result-area" class="max-w-4xl mx-auto hidden animate-fade-in">
+                <div
+                    class="bg-white dark:bg-dark-card rounded-2xl shadow-lg overflow-hidden border border-slate-100 dark:border-slate-700">
+                    <div class="bg-primary-600 p-6 flex justify-between items-center text-white">
+                        <div>
+                            <div class="text-sm opacity-80">Case ID: #DR-8849201</div>
+                            <h2 class="text-xl font-bold">Seagate Barracuda 2TB - External</h2>
+                        </div>
+                        <div class="text-right hidden sm:block">
+                            <div class="text-sm opacity-80">Estimated Completion</div>
+                            <div class="font-bold">Jan 30, 2024</div>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <!-- Progress Bar -->
+                        <div class="relative py-8">
+                            <div
+                                class="absolute top-1/2 left-0 w-full h-1 bg-slate-200 dark:bg-slate-700 -translate-y-1/2 rounded-full">
+                            </div>
+                            <div
+                                class="absolute top-1/2 left-0 w-3/4 h-1 bg-green-500 -translate-y-1/2 rounded-full transition-all duration-1000">
+                            </div>
+
+                            <div class="relative flex justify-between">
+                                <!-- Step 1 -->
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm shadow-md z-10">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="mt-2 text-xs font-bold text-green-600 dark:text-green-400">Received
+                                    </div>
+                                    <div class="text-[10px] text-slate-400">Jan 25</div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm shadow-md z-10">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="mt-2 text-xs font-bold text-green-600 dark:text-green-400">Evaluation
+                                    </div>
+                                    <div class="text-[10px] text-slate-400">Jan 26</div>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm shadow-md z-10">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="mt-2 text-xs font-bold text-green-600 dark:text-green-400">Approval
+                                    </div>
+                                    <div class="text-[10px] text-slate-400">Jan 27</div>
+                                </div>
+                                <!-- Step 4 (Current) -->
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm shadow-md z-10 ring-4 ring-blue-100 dark:ring-blue-900/30 animate-pulse">
+                                        <i class="fa-solid fa-gear fa-spin"></i>
+                                    </div>
+                                    <div class="mt-2 text-xs font-bold text-blue-600 dark:text-blue-400">Recovery</div>
+                                    <div class="text-[10px] text-slate-400">In Progress</div>
+                                </div>
+                                <!-- Step 5 -->
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 flex items-center justify-center text-sm shadow-md z-10">
+                                        <i class="fa-solid fa-flag"></i>
+                                    </div>
+                                    <div class="mt-2 text-xs font-bold text-slate-400">Data Return</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-lg p-4 mb-6">
+                            <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-1"><i
+                                    class="fa-solid fa-circle-info mr-2"></i> Current Status Update</h4>
+                            <p class="text-sm text-blue-700 dark:text-blue-400">Our engineering team has successfully
+                                cloned 98% of the drive. We are currently rebuilding the file structure. No bad sectors
+                                found in critical areas.</p>
+                        </div>
+
+                        <div class="flex justify-end gap-4">
+                            <a href="contact.html"
+                                class="text-slate-500 hover:text-primary-600 text-sm font-medium py-2">Need Help?</a>
+                            <a href="dashboard-client.html"
+                                class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition">Login
+                                to Portal</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Additional Features Section -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Complete Case Management</h2>
+                <p class="text-slate-600 dark:text-slate-400">More than just tracking - manage your entire recovery process online</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Real-time Updates -->
+                <div class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-bell text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Real-time Notifications</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Get instant email and SMS updates when your case status changes. Never miss an important milestone.</p>
+                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                        <li>• Email notifications</li>
+                        <li>• SMS alerts</li>
+                        <li>• Mobile app push notifications</li>
+                        <li>• Desktop browser notifications</li>
+                    </ul>
+                </div>
+
+                <!-- Document Management -->
+                <div class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-lines text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Document Management</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Access all your case documents, quotes, and reports in one secure location.</p>
+                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                        <li>• Digital quotes and invoices</li>
+                        <li>• Recovery reports</li>
+                        <li>• File lists</li>
+                        <li>• Signed agreements</li>
+                    </ul>
+                </div>
+
+                <!-- Direct Communication -->
+                <div class="bg-white dark:bg-dark-card p-8 rounded-2xl border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Direct Communication</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Message your recovery engineer directly and get answers to your questions quickly.</p>
+                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                        <li>• Secure messaging</li>
+                        <li>• File sharing</li>
+                        <li>• Video consultations</li>
+                        <li>• Priority support channel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Explanations -->
+    <section class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Understanding Your Case Status</h2>
+                <p class="text-slate-600 dark:text-slate-400">What each status means and what to expect next</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Received -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-box text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Received</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Your device has arrived at our facility and is logged into our system.</p>
+                </div>
+
+                <!-- Evaluation -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-microscope text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Evaluation</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Our engineers are diagnosing the failure and determining recovery options.</p>
+                </div>
+
+                <!-- Approval -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-file-invoice text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Approval</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Quote is ready. Please review and approve to begin recovery work.</p>
+                </div>
+
+                <!-- Recovery -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-gear text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Recovery</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Active recovery work in progress. Engineers are extracting your data.</p>
+                </div>
+
+                <!-- Data Return -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-truck text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Data Return</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Recovery complete! Your data is being prepared for secure return.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-primary-600 to-blue-700 text-white p-8 rounded-2xl">
+                    <h2 class="text-2xl font-bold mb-4">Need Help With Your Case?</h2>
+                    <p class="mb-6 opacity-90">Our support team is available 24/7 to answer your questions and provide updates on your recovery progress.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                            <i class="fa-solid fa-phone text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Call Support</h3>
+                            <p class="text-sm opacity-80">Speak directly with your case manager</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                            <i class="fa-solid fa-envelope text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Email Support</h3>
+                            <p class="text-sm opacity-80">Get detailed responses within 2 hours</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                            <i class="fa-solid fa-comments text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Live Chat</h3>
+                            <p class="text-sm opacity-80">Instant help during business hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-white mb-6">
+                        <i class="fa-solid fa-shield-halved text-primary-500"></i>
+                        <span>DataRecovery</span>
+                    </a>
+                    <p class="text-slate-400 mb-6">Professional data recovery services you can trust. We bring your lost
+                        memories and critical files back to life.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Hard Drive Recovery</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">SSD Data Recovery</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">RAID & Server</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">USB & SD Card</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Mobile Recovery</a></li>
+                        <li><a href="services.html"
+                                class="text-accent-400 hover:text-accent-300 transition font-semibold">24/7 Emergency
+                                Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-primary-400 transition">How It Works</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400 transition">Pricing & Guarantee</a>
+                        </li>
+                        <li><a href="track-case.html" class="hover:text-primary-400 transition">Track Your Case</a></li>
+                        <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary-500"></i>
+                            <span>123 Data Recovery Lane,<br>Suite 400, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-primary-500"></i>
+                            <a href="tel:8001234567" class="hover:text-white text-lg font-bold">(800) 123-4567</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-primary-500"></i>
+                            <a href="mailto:support@datarecovery.com"
+                                class="hover:text-white">support@datarecovery.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <div class="text-slate-500">
+                    &copy; 2024 DataRecovery Services. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

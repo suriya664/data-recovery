@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Data Not Found | Data Recovery Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-dark-text min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="text-center max-w-2xl mx-auto">
+        <!-- Logo -->
+        <a href="index.html"
+            class="inline-flex items-center gap-2 text-2xl font-bold text-primary-800 dark:text-blue-400 mb-12">
+            <i class="fa-solid fa-shield-halved text-3xl"></i>
+            <span>DataRecovery</span>
+        </a>
+
+        <!-- 404 Visual -->
+        <div class="relative mb-8">
+            <div class="text-[10rem] font-bold text-slate-200 dark:text-slate-800 leading-none select-none">404</div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                    class="w-32 h-32 bg-white dark:bg-dark-card rounded-full shadow-xl flex items-center justify-center animate-bounce">
+                    <i class="fa-solid fa-file-circle-xmark text-6xl text-red-500"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Data Not Found... But We Can Help!</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">The page you're looking for doesn't exist, but
+            typically your lost data is not gone forever. Unlike this page, we can probably recover it.</p>
+
+        <!-- Search -->
+        <div class="max-w-md mx-auto mb-10 relative">
+            <input type="text" placeholder="Search our site..."
+                class="w-full pl-12 pr-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary-500 focus:outline-none dark:text-white">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <a href="index.html"
+                class="p-4 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md hover:text-primary-600 transition border border-slate-100 dark:border-slate-700">
+                <i class="fa-solid fa-home mb-2 text-xl"></i>
+                <div class="font-semibold text-sm">Homepage</div>
+            </a>
+            <a href="services.html"
+                class="p-4 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md hover:text-primary-600 transition border border-slate-100 dark:border-slate-700">
+                <i class="fa-solid fa-list mb-2 text-xl"></i>
+                <div class="font-semibold text-sm">Services</div>
+            </a>
+            <a href="track-case.html"
+                class="p-4 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md hover:text-primary-600 transition border border-slate-100 dark:border-slate-700">
+                <i class="fa-solid fa-magnifying-glass-chart mb-2 text-xl"></i>
+                <div class="font-semibold text-sm">Track Case</div>
+            </a>
+            <a href="contact.html"
+                class="p-4 bg-white dark:bg-dark-card rounded-lg shadow-sm hover:shadow-md hover:text-primary-600 transition border border-slate-100 dark:border-slate-700">
+                <i class="fa-solid fa-headset mb-2 text-xl"></i>
+                <div class="font-semibold text-sm">Support</div>
+            </a>
+        </div>
+
+        <!-- Emergency -->
+        <div class="text-sm text-slate-500">
+            Need immediate help? <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline">Call (800)
+                123-4567</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
