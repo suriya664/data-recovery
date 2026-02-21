@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -50,36 +50,6 @@
                             sm: '640px', md: '768px', lg: '1024px', xl: '1280px', '2xl': '1280px',
                         },
                     },
-                    plugins: [
-                        function({ addUtilities }) {
-                            addUtilities({
-                                '.rtl': {
-                                    'direction': 'rtl',
-                                },
-                                '.ltr': {
-                                    'direction': 'ltr',
-                                },
-                                '.text-right': {
-                                    'text-align': 'right',
-                                },
-                                '.text-left': {
-                                    'text-align': 'left',
-                                },
-                                '.float-right': {
-                                    'float': 'right',
-                                },
-                                '.float-left': {
-                                    'float': 'left',
-                                },
-                                '.ml-auto': {
-                                    'margin-left': 'auto',
-                                },
-                                '.mr-auto': {
-                                    'margin-right': 'auto',
-                                },
-                            })
-                        }
-                    ]
                 }
             }
         }
@@ -119,12 +89,8 @@
                     <a href="about.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">About</a>
                     <a href="services.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
-                    <a href="how-it-works.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">How
-                        It Works</a>
                     <a href="pricing.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
-                    <a href="track-case.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Track
-                        Case</a>
                     <a href="contact.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Contact</a>
                 </nav>
@@ -146,14 +112,7 @@
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:block"></i>
                     </button>
-                    
-                    <!-- RTL Toggle -->
-                    <button
-                        id="rtl-toggle"
-                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-400"
-                        title="Toggle RTL/LTR">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    </button>
+
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -177,13 +136,14 @@
             <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
                 <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
                 <a href="index-v2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="how-it-works.html">How It Works</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="track-case.html">Track Case</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="mt-auto flex flex-col gap-3">
+                <a href="login.html"
+                    class="w-full text-center border border-primary-600 text-primary-600 py-3 rounded-lg font-bold hover:bg-primary-50 transition">Login</a>
                 <a href="dashboard-client.html"
                     class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Dashboard</a>
                 <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
@@ -345,8 +305,10 @@
                         class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
                         <i class="fa-solid fa-shield-halved text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">No Data, No Charge</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-center">Our guarantee involves zero financial risk. You only
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">No Data, No Charge
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Our guarantee involves zero financial
+                        risk. You only
                         pay if we successfully recover your critical files.</p>
                 </div>
 
@@ -358,7 +320,8 @@
                         <i class="fa-solid fa-microscope text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">ISO 5 Clean Room</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-center">State-of-the-art facilities ensure your drive is
+                    <p class="text-slate-600 dark:text-slate-400 text-center">State-of-the-art facilities ensure your
+                        drive is
                         opened in a certified particle-free environment.</p>
                 </div>
 
@@ -369,8 +332,10 @@
                         class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/20 text-indigo-600 rounded-lg flex items-center justify-center mb-6">
                         <i class="fa-solid fa-user-shield text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">256-bit Encryption</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-center">Your privacy is paramount. We use military-grade
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">256-bit Encryption
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Your privacy is paramount. We use
+                        military-grade
                         encryption for all data transfers and storage.</p>
                 </div>
 
@@ -382,7 +347,8 @@
                         <i class="fa-solid fa-magnifying-glass text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 text-center">Free Diagnostics</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-center">Get a detailed analysis and fixed-price quote within
+                    <p class="text-slate-600 dark:text-slate-400 text-center">Get a detailed analysis and fixed-price
+                        quote within
                         24-48 hours at absolutely no cost.</p>
                 </div>
             </div>
@@ -438,7 +404,8 @@
                         <div class="flex gap-4">
                             <div
                                 class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/50 border border-emerald-500 text-emerald-400 font-bold flex items-center justify-center">
-                                <i class="fa-solid fa-check"></i></div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
                             <div>
                                 <h4 class="text-xl font-bold text-emerald-400">Secure Delivery</h4>
                                 <p class="text-slate-400 text-sm mt-1">Download your data securely or receive it on an
@@ -448,37 +415,13 @@
                     </div>
                 </div>
 
-                <!-- Right: Tracking Teaser -->
-                <div class="lg:w-1/2 w-full">
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl">
-                        <div class="text-center mb-8">
-                            <div
-                                class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                                <i class="fa-solid fa-magnifying-glass-chart text-2xl text-white"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">Track Your Case</h3>
-                            <p class="text-slate-300 mt-2">Already submitted a drive? Enter your Case ID to see
-                                real-time updates.</p>
-                        </div>
 
-                        <form action="track-case.html" class="flex flex-col gap-4">
-                            <div>
-                                <label for="case-id" class="sr-only">Case ID</label>
-                                <input type="text" id="case-id" placeholder="Enter Case ID (e.g. DR-2024-X)"
-                                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500">
-                            </div>
-                            <button type="submit"
-                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
-                                Track My Recovery
-                            </button>
-                        </form>
-
-                        <div class="mt-6 text-center text-sm text-slate-400">
-                            <p><i class="fa-solid fa-lock mr-1"></i> Secure Client Portal Access</p>
-                        </div>
-                    </div>
+                <div class="mt-6 text-center text-sm text-slate-400">
+                    <p><i class="fa-solid fa-lock mr-1"></i> Secure Client Portal Access</p>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -660,10 +603,6 @@
                     <h3 class="text-white font-bold text-lg mb-6">Company</h3>
                     <ul class="space-y-3">
                         <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-primary-400 transition">How It Works</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary-400 transition">Pricing & Guarantee</a>
-                        </li>
-                        <li><a href="track-case.html" class="hover:text-primary-400 transition">Track Your Case</a></li>
                         <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
                         </li>
                         <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
@@ -707,37 +646,7 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
-    
-    <!-- RTL Toggle Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const rtlToggle = document.getElementById('rtl-toggle');
-            const html = document.documentElement;
-            
-            // Load saved RTL preference
-            const savedRTL = localStorage.getItem('rtl-mode');
-            if (savedRTL === 'rtl') {
-                html.setAttribute('dir', 'rtl');
-                html.classList.add('rtl');
-                html.classList.remove('ltr');
-            }
-            
-            rtlToggle.addEventListener('click', function() {
-                const currentDir = html.getAttribute('dir');
-                const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-                
-                html.setAttribute('dir', newDir);
-                html.classList.remove('rtl', 'ltr');
-                html.classList.add(newDir);
-                
-                // Save preference
-                localStorage.setItem('rtl-mode', newDir);
-                
-                // Update button title
-                rtlToggle.setAttribute('title', newDir === 'rtl' ? 'Switch to LTR' : 'Switch to RTL');
-            });
-        });
-    </script>
+
 </body>
 
 </html>

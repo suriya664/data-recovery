@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Data Recovery Support</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,21 +21,6 @@
                         dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    // RTL Support
-                    plugins: [
-                        function({ addUtilities }) {
-                            addUtilities({
-                                '.rtl': { 'direction': 'rtl' },
-                                '.ltr': { 'direction': 'ltr' },
-                                '.text-right': { 'text-align': 'right' },
-                                '.text-left': { 'text-align': 'left' },
-                                '.float-right': { 'float': 'right' },
-                                '.float-left': { 'float': 'left' },
-                                '.ml-auto': { 'margin-left': 'auto' },
-                                '.mr-auto': { 'margin-right': 'auto' },
-                            })
-                        }
-                    ]
                 }
             }
         }
@@ -60,20 +45,15 @@
                     <span>DataRecovery</span>
                 </a>
                 <nav class="hidden lg:flex items-center gap-6 font-medium">
-                    <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                    <a href="index.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home</a>
                     <a href="index-v2.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home
                         2</a>
                     <a href="about.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">About</a>
                     <a href="services.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
-                    <a href="how-it-works.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">How
-                        It Works</a>
                     <a href="pricing.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
-                    <a href="track-case.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Track
-                        Case</a>
-                    <a href="contact.html"
-                        class="text-primary-600 dark:text-blue-400">Contact</a>
+                    <a href="contact.html" class="text-primary-600 dark:text-blue-400">Contact</a>
                 </nav>
                 <div class="hidden lg:flex items-center gap-4">
                     <a href="login.html"
@@ -88,13 +68,6 @@
                         class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:block"></i>
-                    </button>
-                    <!-- RTL Toggle -->
-                    <button
-                        id="rtl-toggle"
-                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-400"
-                        title="Toggle RTL/LTR">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     </button>
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-700 dark:text-white">
@@ -116,15 +89,16 @@
                 </button>
             </div>
             <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
-                <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                <a href="index.html">Home</a>
                 <a href="index-v2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="how-it-works.html">How It Works</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="track-case.html">Track Case</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="text-primary-600 dark:text-blue-400">Contact</a>
             </nav>
             <div class="mt-auto flex flex-col gap-3">
+                <a href="login.html"
+                    class="w-full text-center border border-primary-600 text-primary-600 py-3 rounded-lg font-bold hover:bg-primary-50 transition">Login</a>
                 <a href="dashboard-client.html"
                     class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Dashboard</a>
                 <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
@@ -291,49 +265,62 @@
                             </button>
                         </form>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-4">Speak directly with our recovery specialists</p>
-                    <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline">(800) 123-4567</a>
-                    <p class="text-sm text-slate-500 mt-2">24/7 Emergency Service</p>
-                </div>
-
-                <!-- Support Options -->
-                <div class="lg:w-1/3 space-y-6">
-                    <!-- Phone Support -->
-                    <div class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-phone text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-3">Speak directly with our recovery specialists</p>
-                        <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline block">(800) 123-4567</a>
-                        <p class="text-sm text-slate-500">24/7 Emergency Service</p>
+                    <div class="mt-16">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Speak directly with our recovery specialists
+                        </p>
+                        <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline">(800) 123-4567</a>
+                        <p class="text-sm text-slate-500 mt-2">24/7 Emergency Service</p>
                     </div>
 
-                    <!-- Email Support -->
-                    <div class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                        <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-envelope text-xl"></i>
+                    <!-- Support Options -->
+                    <div class="lg:w-1/3 space-y-6">
+                        <!-- Phone Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
+                            <div
+                                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-3">Speak directly with our recovery
+                                specialists
+                            </p>
+                            <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline block">(800)
+                                123-4567</a>
+                            <p class="text-sm text-slate-500">24/7 Emergency Service</p>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Email Support</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-3">Get detailed responses to your questions</p>
-                        <a href="mailto:support@datarecovery.com" class="text-primary-600 font-bold hover:underline block">support@datarecovery.com</a>
-                        <p class="text-sm text-slate-500">Response within 2 hours</p>
-                    </div>
 
-                    <!-- Live Chat -->
-                    <div class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-comments text-xl"></i>
+                        <!-- Email Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Email Support</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-3">Get detailed responses to your questions
+                            </p>
+                            <a href="mailto:support@datarecovery.com"
+                                class="text-primary-600 font-bold hover:underline block">support@datarecovery.com</a>
+                            <p class="text-sm text-slate-500">Response within 2 hours</p>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Live Chat</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-3">Instant help during business hours</p>
-                        <button class="text-primary-600 font-bold hover:underline">Start Chat</button>
-                        <p class="text-sm text-slate-500">Mon-Fri 9AM-6PM EST</p>
+
+                        <!-- Live Chat -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-comments text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Live Chat</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-3">Instant help during business hours</p>
+                            <button class="text-primary-600 font-bold hover:underline">Start Chat</button>
+                            <p class="text-sm text-slate-500">Mon-Fri 9AM-6PM EST</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Business Hours -->
@@ -342,7 +329,7 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gradient-to-r from-primary-600 to-blue-700 text-white p-8 rounded-2xl">
                     <h2 class="text-2xl font-bold mb-6">Business Hours & Response Times</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="font-bold mb-4 text-lg">Support Hours</h3>
@@ -365,7 +352,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div>
                             <h3 class="font-bold mb-4 text-lg">Response Times</h3>
                             <div class="space-y-2 text-sm">
@@ -403,23 +390,29 @@
 
             <div class="max-w-3xl mx-auto space-y-4">
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">How quickly can you start my recovery?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">Emergency cases begin immediately upon arrival. Standard cases typically start within 24 hours of device receipt.</p>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">How quickly can you start my recovery?
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400">Emergency cases begin immediately upon arrival.
+                        Standard cases typically start within 24 hours of device receipt.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
                     <h3 class="font-bold text-slate-900 dark:text-white mb-2">Do you serve international clients?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">Yes! We serve clients worldwide with secure shipping options and multilingual support.</p>
+                    <p class="text-slate-600 dark:text-slate-400">Yes! We serve clients worldwide with secure shipping
+                        options and multilingual support.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">What information do you need to provide a quote?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">We need the device type, storage capacity, and a brief description of what happened. No personal data required.</p>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">What information do you need to provide a
+                        quote?</h3>
+                    <p class="text-slate-600 dark:text-slate-400">We need the device type, storage capacity, and a brief
+                        description of what happened. No personal data required.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
                     <h3 class="font-bold text-slate-900 dark:text-white mb-2">Is my data secure with you?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">Absolutely. We use bank-level encryption, secure facilities, and strict privacy policies. Your data never leaves our secure environment.</p>
+                    <p class="text-slate-600 dark:text-slate-400">Absolutely. We use bank-level encryption, secure
+                        facilities, and strict privacy policies. Your data never leaves our secure environment.</p>
                 </div>
             </div>
         </div>
@@ -432,12 +425,15 @@
                 <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
                 <h2 class="text-2xl font-bold">Emergency Data Loss?</h2>
             </div>
-            <p class="mb-6 max-w-2xl mx-auto opacity-90">For critical business data loss or time-sensitive situations, call our emergency hotline for immediate assistance.</p>
+            <p class="mb-6 max-w-2xl mx-auto opacity-90">For critical business data loss or time-sensitive situations,
+                call our emergency hotline for immediate assistance.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:8001234567" class="bg-white text-red-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition transform hover:-translate-y-1">
+                <a href="tel:8001234567"
+                    class="bg-white text-red-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition transform hover:-translate-y-1">
                     <i class="fa-solid fa-phone mr-2"></i> Call Emergency Hotline
                 </a>
-                <a href="upload.html" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-red-600 transition transform hover:-translate-y-1">
+                <a href="upload.html"
+                    class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-red-600 transition transform hover:-translate-y-1">
                     <i class="fa-solid fa-lock mr-2"></i> Upload Files Securely
                 </a>
             </div>
@@ -493,10 +489,6 @@
                     <h3 class="text-white font-bold text-lg mb-6">Company</h3>
                     <ul class="space-y-3">
                         <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-primary-400 transition">How It Works</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary-400 transition">Pricing & Guarantee</a>
-                        </li>
-                        <li><a href="track-case.html" class="hover:text-primary-400 transition">Track Your Case</a></li>
                         <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
                         </li>
                         <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>

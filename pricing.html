@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Transparent Data Recovery Cost</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,21 +21,6 @@
                         dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    // RTL Support
-                    plugins: [
-                        function({ addUtilities }) {
-                            addUtilities({
-                                '.rtl': { 'direction': 'rtl' },
-                                '.ltr': { 'direction': 'ltr' },
-                                '.text-right': { 'text-align': 'right' },
-                                '.text-left': { 'text-align': 'left' },
-                                '.float-right': { 'float': 'right' },
-                                '.float-left': { 'float': 'left' },
-                                '.ml-auto': { 'margin-left': 'auto' },
-                                '.mr-auto': { 'margin-right': 'auto' },
-                            })
-                        }
-                    ]
                 }
             }
         }
@@ -60,17 +45,13 @@
                     <span>DataRecovery</span>
                 </a>
                 <nav class="hidden lg:flex items-center gap-6 font-medium">
-                    <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                    <a href="index.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home</a>
                     <a href="index-v2.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home
                         2</a>
+                    <a href="about.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">About</a>
                     <a href="services.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
-                    <a href="how-it-works.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">How
-                        It Works</a>
-                    <a href="pricing.html"
-                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
-                    <a href="track-case.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Track
-                        Case</a>
+                    <a href="pricing.html" class="text-primary-600 dark:text-blue-400">Pricing</a>
                     <a href="contact.html"
                         class="hover:text-primary-600 dark:hover:text-blue-400 transition">Contact</a>
                 </nav>
@@ -83,13 +64,6 @@
                         class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:block"></i>
-                    </button>
-                    <!-- RTL Toggle -->
-                    <button
-                        id="rtl-toggle"
-                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-400"
-                        title="Toggle RTL/LTR">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     </button>
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-700 dark:text-white">
@@ -111,15 +85,16 @@
                 </button>
             </div>
             <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
-                <a href="index.html" class="text-primary-600 dark:text-blue-400">Home</a>
+                <a href="index.html">Home</a>
                 <a href="index-v2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="track-case.html">Track Case</a>
+                <a href="pricing.html" class="text-primary-600 dark:text-blue-400">Pricing</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="mt-auto flex flex-col gap-3">
+                <a href="login.html"
+                    class="w-full text-center border border-primary-600 text-primary-600 py-3 rounded-lg font-bold hover:bg-primary-50 transition">Login</a>
                 <a href="dashboard-client.html"
                     class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Dashboard</a>
                 <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
@@ -255,44 +230,53 @@
         <div class="container mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">What Affects Your Recovery Cost?</h2>
-                <p class="text-slate-600 dark:text-slate-400">Several factors determine the final price. We provide transparent quotes with no hidden fees.</p>
+                <p class="text-slate-600 dark:text-slate-400">Several factors determine the final price. We provide
+                    transparent quotes with no hidden fees.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Device Type -->
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa-solid fa-hard-drive text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Device Type</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Different storage media require specialized tools and expertise.</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Different storage media require specialized
+                        tools and expertise.</p>
                 </div>
 
                 <!-- Damage Level -->
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa-solid fa-exclamation-triangle text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Damage Severity</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Physical damage requires clean room work, while logical issues are simpler.</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Physical damage requires clean room work,
+                        while logical issues are simpler.</p>
                 </div>
 
                 <!-- Capacity -->
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa-solid fa-database text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Storage Capacity</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Larger drives require more processing time and resources.</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Larger drives require more processing time and
+                        resources.</p>
                 </div>
 
                 <!-- Urgency -->
                 <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
-                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <div
+                        class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                         <i class="fa-solid fa-clock text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Time Sensitivity</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Emergency service requires dedicated resources and overtime work.</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Emergency service requires dedicated resources
+                        and overtime work.</p>
                 </div>
             </div>
         </div>
@@ -303,11 +287,13 @@
         <div class="container mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Service Level Comparison</h2>
-                <p class="text-slate-600 dark:text-slate-400">Choose the service level that matches your needs and budget</p>
+                <p class="text-slate-600 dark:text-slate-400">Choose the service level that matches your needs and
+                    budget</p>
             </div>
 
             <div class="overflow-x-auto">
-                <table class="w-full max-w-4xl mx-auto bg-white dark:bg-dark-card rounded-xl border border-slate-200 dark:border-slate-700">
+                <table
+                    class="w-full max-w-4xl mx-auto bg-white dark:bg-dark-card rounded-xl border border-slate-200 dark:border-slate-700">
                     <thead>
                         <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
                             <th class="text-left p-4 font-semibold text-slate-900 dark:text-white">Feature</th>
@@ -359,8 +345,9 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gradient-to-r from-primary-600 to-blue-700 text-white p-8 rounded-2xl">
                     <h2 class="text-2xl font-bold mb-4">Flexible Payment Options</h2>
-                    <p class="mb-6 opacity-90">We understand that data loss can be unexpected. That's why we offer flexible payment solutions to fit your budget.</p>
-                    
+                    <p class="mb-6 opacity-90">We understand that data loss can be unexpected. That's why we offer
+                        flexible payment solutions to fit your budget.</p>
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
                             <i class="fa-solid fa-credit-card text-2xl mb-2"></i>
@@ -394,17 +381,20 @@
             <div class="max-w-3xl mx-auto space-y-4">
                 <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700">
                     <h3 class="font-bold text-slate-900 dark:text-white mb-2">Is the evaluation really free?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">Yes! We provide a comprehensive diagnostic and firm price quote at no charge. You only pay if you approve the recovery work.</p>
+                    <p class="text-slate-600 dark:text-slate-400">Yes! We provide a comprehensive diagnostic and firm
+                        price quote at no charge. You only pay if you approve the recovery work.</p>
                 </div>
-                
+
                 <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700">
                     <h3 class="font-bold text-slate-900 dark:text-white mb-2">What if you can't recover my data?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">With our "No Data, No Fee" guarantee, you pay nothing if we're unable to recover your important files. We even cover return shipping.</p>
+                    <p class="text-slate-600 dark:text-slate-400">With our "No Data, No Fee" guarantee, you pay nothing
+                        if we're unable to recover your important files. We even cover return shipping.</p>
                 </div>
-                
+
                 <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700">
                     <h3 class="font-bold text-slate-900 dark:text-white mb-2">Are there any hidden fees?</h3>
-                    <p class="text-slate-600 dark:text-slate-400">Never. The quote we provide is the final price. It includes all labor, parts, and return shipping. No surprises.</p>
+                    <p class="text-slate-600 dark:text-slate-400">Never. The quote we provide is the final price. It
+                        includes all labor, parts, and return shipping. No surprises.</p>
                 </div>
             </div>
         </div>
@@ -414,8 +404,10 @@
     <section class="py-20 bg-primary-600 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Get Your Free Quote Today</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">No obligation, no hidden fees. Just honest pricing from expert data recovery professionals.</p>
-            <a href="contact.html" class="bg-white text-primary-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition transform hover:-translate-y-1">
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">No obligation, no hidden fees. Just honest pricing from
+                expert data recovery professionals.</p>
+            <a href="contact.html"
+                class="bg-white text-primary-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition transform hover:-translate-y-1">
                 Request Free Evaluation
             </a>
         </div>
@@ -470,10 +462,6 @@
                     <h3 class="text-white font-bold text-lg mb-6">Company</h3>
                     <ul class="space-y-3">
                         <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-primary-400 transition">How It Works</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary-400 transition">Pricing & Guarantee</a>
-                        </li>
-                        <li><a href="track-case.html" class="hover:text-primary-400 transition">Track Your Case</a></li>
                         <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
                         </li>
                         <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
