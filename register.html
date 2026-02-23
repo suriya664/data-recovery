@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account - Data Recovery Services</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,90 +37,59 @@
 </head>
 
 <body
-    class="bg-white dark:bg-dark-bg text-slate-800 dark:text-dark-text min-h-screen flex transition-colors duration-300">
+    class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-dark-text min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
 
-    <!-- Left Side (Visual) -->
-    <div class="hidden lg:flex lg:w-1/2 relative register-bg flex-col justify-between p-12 text-white">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 to-blue-900/80 backdrop-blur-sm"></div>
+    <!-- Theme Toggle (Absolute) -->
+    <button
+        class="theme-toggle absolute top-6 right-6 p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400 z-50">
+        <i class="fa-solid fa-moon dark:hidden"></i>
+        <i class="fa-solid fa-sun hidden dark:block"></i>
+    </button>
 
-        <div class="relative z-10">
-            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-white">
-                <i class="fa-solid fa-shield-halved text-3xl"></i>
-                <span>DataRecovery</span>
-            </a>
-        </div>
+    <!-- Main Card Container -->
+    <div class="w-full max-w-xl my-4 md:my-8">
+        <div
+            class="bg-white dark:bg-dark-card rounded-2xl shadow-xl p-5 md:p-12 border border-slate-100 dark:border-slate-800 mx-auto">
 
-        <div class="relative z-10 max-w-lg mb-12">
-            <h2 class="text-4xl font-bold mb-6">Join Thousands of Satisfied Clients</h2>
-            <ul class="space-y-4 text-lg text-blue-100">
-                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Real-time
-                    case tracking</li>
-                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Direct
-                    technician messaging</li>
-                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Secure file
-                    uploads (5GB+)</li>
-                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-400"></i> Instant
-                    quote approval</li>
-            </ul>
-        </div>
-
-        <div class="relative z-10 flex gap-4">
-            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo1" class="h-8 opacity-70">
-            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo2" class="h-8 opacity-70">
-            <img src="https://via.placeholder.com/80x40/ffffff/cccccc?text=Logo3" class="h-8 opacity-70">
-        </div>
-    </div>
-
-    <!-- Right Side (Register Form) -->
-    <div
-        class="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 lg:p-12 relative dark:bg-dark-bg overflow-y-auto">
-
-        <!-- Mobile Logo -->
-        <a href="index.html"
-            class="lg:hidden absolute top-6 left-6 text-2xl font-bold text-primary-800 dark:text-blue-400">
-            <i class="fa-solid fa-shield-halved"></i>
-        </a>
-
-        <!-- Dark Mode Toggle -->
-        <button
-            class="theme-toggle absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
-            <i class="fa-solid fa-moon dark:hidden"></i>
-            <i class="fa-solid fa-sun hidden dark:block"></i>
-        </button>
-
-        <div class="w-full max-w-md py-10">
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Create Your Account</h1>
-                <p class="text-slate-600 dark:text-slate-400">Get started with secure data recovery</p>
+            <!-- Logo & Brand - Centered -->
+            <div class="text-center mb-6 md:mb-8">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 md:gap-3 text-2xl md:text-3xl font-bold text-primary-600 dark:text-blue-400 mb-4 md:mb-6">
+                    <i class="fa-solid fa-shield-halved text-3xl md:text-4xl"></i>
+                    <span>DataRecovery</span>
+                </a>
+                <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">Create Your Account</h1>
+                <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 px-2">Get started with secure data
+                    recovery</p>
             </div>
 
             <!-- Steps Progress -->
-            <div class="flex items-center justify-between mb-8 max-w-sm mx-auto">
+            <div class="flex items-center justify-between mb-8 max-w-sm mx-auto px-2">
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm">
+                        class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-xs md:text-sm">
                         1</div>
-                    <span class="text-xs mt-1 text-primary-600 font-medium">Details</span>
+                    <span class="text-[10px] md:text-xs mt-1 text-primary-600 font-medium">Details</span>
                 </div>
-                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-1 md:mx-2"></div>
                 <!-- Simplified to single step view for HTML delivery, keeping design cleaner -->
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-sm">
+                        class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-xs md:text-sm">
                         2</div>
-                    <span class="text-xs mt-1 text-slate-400">Verify</span>
+                    <span class="text-[10px] md:text-xs mt-1 text-slate-400">Verify</span>
                 </div>
-                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                <div class="flex-1 h-0.5 bg-slate-200 dark:bg-slate-700 mx-1 md:mx-2"></div>
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-sm">
+                        class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-xs md:text-sm">
                         3</div>
-                    <span class="text-xs mt-1 text-slate-400">Done</span>
+                    <span class="text-[10px] md:text-xs mt-1 text-slate-400">Done</span>
                 </div>
             </div>
 
             <form action="dashboard-client.html" class="space-y-5">
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">First
                             Name</label>
@@ -200,7 +169,7 @@
                     <div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
                 </div>
                 <div class="relative flex justify-center text-sm">
-                    <span class="px-2 bg-white dark:bg-dark-bg text-slate-500">Or register with</span>
+                    <span class="px-2 bg-white dark:bg-dark-card text-slate-500">Or register with</span>
                 </div>
             </div>
 
