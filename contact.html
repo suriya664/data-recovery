@@ -69,10 +69,22 @@
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:block"></i>
                     </button>
+                    <!-- Dashboard Icon -->
+                    <a href="dashboard-client.html"
+                        class="p-2 text-slate-600 dark:text-blue-400 hover:text-primary-600 transition"
+                        title="Dashboard">
+                        <i class="fa-solid fa-gauge-high text-xl"></i>
+                    </a>
                 </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-700 dark:text-white">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <!-- Mobile Activities -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <a href="dashboard-client.html" class="p-2 text-slate-700 dark:text-white" title="Dashboard">
+                        <i class="fa-solid fa-gauge-high text-xl"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-2xl text-slate-700 dark:text-white">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -134,49 +146,65 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12">
 
-                <!-- Contact Info & Locations -->
-                <div class="lg:w-1/3 space-y-8">
+                <!-- Sidebar: Support & Map -->
+                <div class="lg:w-1/3 space-y-6">
+                    <!-- Compact Support Cards -->
+                    <div class="grid grid-cols-1 gap-4">
+                        <!-- Phone Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Phone Support</h3>
+                                <a href="tel:8001234567"
+                                    class="text-sm text-primary-600 font-bold hover:underline">(800) 123-4567</a>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">24/7 Emergency</p>
+                            </div>
+                        </div>
 
-                    <!-- Direct Contact -->
+                        <!-- Email Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Email Support</h3>
+                                <a href="mailto:port@data.com"
+                                    class="text-sm text-primary-600 font-bold hover:underline">port@data.com</a>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">Response within 2h</p>
+                            </div>
+                        </div>
+
+                        <!-- Live Chat -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Live Chat</h3>
+                                <button class="text-sm text-primary-600 font-bold hover:underline">Start Instant
+                                    Chat</button>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">Mon-Fri 9AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Lab Address -->
                     <div
-                        class="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-                        <h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Direct Contact</h2>
-                        <ul class="space-y-6">
-                            <li class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">Toll-Free (24/7)</p>
-                                    <a href="tel:8001234567"
-                                        class="text-lg font-bold text-slate-900 dark:text-white hover:text-primary-600">(800)
-                                        123-4567</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">Email Support</p>
-                                    <a href="mailto:support@datarecovery.com"
-                                        class="text-lg font-bold text-slate-900 dark:text-white hover:text-primary-600">support@datarecovery.com</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-map-location-dot"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">Main Lab</p>
-                                    <p class="text-slate-900 dark:text-white font-medium">123 Tech Blvd, Suite
-                                        400<br>New York, NY 10001</p>
-                                </div>
-                            </li>
-                        </ul>
+                        class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-primary-600"></i>
+                        <div class="text-sm">
+                            <p class="font-bold text-slate-900 dark:text-white">Main Lab</p>
+                            <p class="text-slate-600 dark:text-slate-400">123 Tech Blvd, Suite 400<br>New York, NY 10001
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Map Placeholder -->
@@ -264,60 +292,6 @@
                                 Request Free Evaluation
                             </button>
                         </form>
-                    </div>
-                    <div class="mt-16">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Speak directly with our recovery specialists
-                        </p>
-                        <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline">(800) 123-4567</a>
-                        <p class="text-sm text-slate-500 mt-2">24/7 Emergency Service</p>
-                    </div>
-
-                    <!-- Support Options -->
-                    <div class="lg:w-1/3 space-y-6">
-                        <!-- Phone Support -->
-                        <div
-                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                            <div
-                                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fa-solid fa-phone text-xl"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Phone Support</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-3">Speak directly with our recovery
-                                specialists
-                            </p>
-                            <a href="tel:8001234567" class="text-primary-600 font-bold hover:underline block">(800)
-                                123-4567</a>
-                            <p class="text-sm text-slate-500">24/7 Emergency Service</p>
-                        </div>
-
-                        <!-- Email Support -->
-                        <div
-                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                            <div
-                                class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fa-solid fa-envelope text-xl"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Email Support</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-3">Get detailed responses to your questions
-                            </p>
-                            <a href="mailto:support@datarecovery.com"
-                                class="text-primary-600 font-bold hover:underline block">support@datarecovery.com</a>
-                            <p class="text-sm text-slate-500">Response within 2 hours</p>
-                        </div>
-
-                        <!-- Live Chat -->
-                        <div
-                            class="bg-white dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-700 text-center">
-                            <div
-                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fa-solid fa-comments text-xl"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Live Chat</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-3">Instant help during business hours</p>
-                            <button class="text-primary-600 font-bold hover:underline">Start Chat</button>
-                            <p class="text-sm text-slate-500">Mon-Fri 9AM-6PM EST</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -509,8 +483,7 @@
                         </li>
                         <li class="flex items-center gap-4">
                             <i class="fa-solid fa-envelope text-primary-500"></i>
-                            <a href="mailto:support@datarecovery.com"
-                                class="hover:text-white">support@datarecovery.com</a>
+                            <a href="mailto:port@data.com" class="hover:text-white">port@data.com</a>
                         </li>
                     </ul>
                 </div>
