@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Upload - Data Recovery Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF', 600: '#2563eb', 700: '#1d4ed8' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-dark-text transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Simple Header for utility page -->
+    <header class="bg-white dark:bg-dark-card border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-primary-800 dark:text-blue-400">
+                <i class="fa-solid fa-shield-halved text-2xl"></i>
+                <span>DataRecovery</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium hover:text-primary-600 transition dark:text-slate-300">
+                &larr; Back to Home
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-16 flex flex-col items-center">
+
+        <div class="text-center max-w-2xl mb-12">
+            <h1 class="text-3xl font-bold mb-4">Secure File Upload</h1>
+            <p class="text-slate-600 dark:text-slate-400">Safely upload supplementary files, file lists, or screenshots
+                for your recovery case. Connection is encrypted with 256-bit SSL.</p>
+        </div>
+
+        <div
+            class="w-full max-w-2xl bg-white dark:bg-dark-card rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-8">
+
+            <div class="mb-8">
+                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Case Reference ID
+                    (Required)</label>
+                <input type="text" placeholder="e.g. DR-XXXXXX"
+                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white uppercase">
+            </div>
+
+            <!-- Dropzone -->
+            <div
+                class="border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl p-10 text-center hover:bg-slate-50 dark:hover:bg-slate-800/50 transition cursor-pointer group bg-slate-50/50 dark:bg-transparent">
+                <div
+                    class="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-cloud-arrow-up text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Drag & Drop Files Here</h3>
+                <p class="text-slate-500 text-sm mb-6">or <span
+                        class="text-primary-600 font-bold hover:underline">Browse Computer</span></p>
+                <p class="text-xs text-slate-400 uppercase tracking-wide">Supported: PDF, JPG, PNG, DOCX, ZIP (Max 5GB)
+                </p>
+            </div>
+
+            <!-- Progress List (Mock) -->
+            <div class="mt-8 space-y-3">
+                <!-- File 1: Uploading -->
+                <div
+                    class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-100 dark:border-slate-700">
+                    <i class="fa-regular fa-file-image text-slate-400 text-lg"></i>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="font-medium truncate dark:text-white">screenshot_error_msg.png</span>
+                            <span class="text-slate-500">45%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
+                            <div class="bg-primary-600 h-1.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <button class="text-slate-400 hover:text-red-500"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <!-- File 2: Done -->
+                <div
+                    class="flex items-center gap-3 p-3 bg-emerald-50 dark:bg-emerald-900/10 rounded-lg border border-emerald-100 dark:border-emerald-900/30">
+                    <i class="fa-regular fa-file-lines text-emerald-600 text-lg"></i>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between text-sm">
+                            <span
+                                class="font-medium truncate text-emerald-900 dark:text-emerald-300">file_list_important.txt</span>
+                            <span class="text-emerald-600 dark:text-emerald-400 text-xs flex items-center"><i
+                                    class="fa-solid fa-check mr-1"></i> Uploaded</span>
+                        </div>
+                    </div>
+                    <button class="text-emerald-600 hover:text-emerald-800 dark:hover:text-emerald-300"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700 flex justify-end">
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition">
+                    Submit Files
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="text-center py-6 text-slate-400 text-sm">
+        <p><i class="fa-solid fa-lock text-green-500 mr-1"></i> End-to-End Encrypted Transfer</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

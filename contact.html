@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Data Recovery Support</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1E40AF', 600: '#2563eb', 700: '#1d4ed8' },
+                        dark: { bg: '#0F172A', card: '#1E293B', text: '#F1F5F9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white dark:bg-dark-bg text-slate-800 dark:text-dark-text transition-colors duration-300">
+
+    <!-- Header (Same as Index) -->
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md shadow-sm"
+        id="main-header">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html"
+                    class="flex items-center gap-2 text-2xl font-bold text-primary-800 dark:text-blue-400">
+                    <i class="fa-solid fa-shield-halved text-3xl"></i>
+                    <span>DataRecovery</span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-6 font-medium">
+                    <a href="index.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="index-v2.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">Home
+                        2</a>
+                    <a href="about.html" class="hover:text-primary-600 dark:hover:text-blue-400 transition">About</a>
+                    <a href="services.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Services</a>
+                    <a href="pricing.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Pricing</a>
+                    <a href="contact.html" class="text-primary-600 dark:text-blue-400">Contact</a>
+                    <a href="dashboard-client.html"
+                        class="hover:text-primary-600 dark:hover:text-blue-400 transition">Dashboard</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="register.html"
+                        class="bg-primary-700 hover:bg-primary-800 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition text-sm font-bold">
+                        Sign Up
+                    </a>
+                    <button
+                        class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-yellow-400">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <!-- Mobile Activities -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <button id="mobile-menu-btn" class="text-2xl text-slate-700 dark:text-white">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-transform translate-x-full lg:hidden flex justify-end">
+        <div class="w-4/5 max-w-sm bg-white dark:bg-dark-card h-full shadow-2xl p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold dark:text-white">Menu</span>
+                <button id="close-menu-btn" class="text-2xl text-slate-500 hover:text-red-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-lg font-medium dark:text-slate-200">
+                <a href="index.html">Home</a>
+                <a href="index-v2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html" class="text-primary-600 dark:text-blue-400">Contact</a>
+                <a href="dashboard-client.html">Dashboard</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="register.html"
+                    class="w-full text-center bg-primary-700 text-white py-3 rounded-lg shadow-md font-bold">Sign Up</a>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t dark:border-slate-700">
+                    <span class="text-sm text-slate-500">Theme</span>
+                    <button class="theme-toggle p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        <i class="fa-solid fa-moon dark:hidden text-slate-700"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Hero -->
+    <section class="relative pt-32 pb-12 overflow-hidden bg-slate-900 text-white text-center">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Professional contact/support background -->
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Data Recovery Support" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/70"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">24/7 Support for your data recovery needs. Visit our
+                labs or contact us remotely.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Sidebar: Support & Map -->
+                <div class="lg:w-1/3 space-y-6">
+                    <!-- Compact Support Cards -->
+                    <div class="grid grid-cols-1 gap-4">
+                        <!-- Phone Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Phone Support</h3>
+                                <a href="tel:8001234567"
+                                    class="text-sm text-primary-600 font-bold hover:underline">(800) 123-4567</a>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">24/7 Emergency</p>
+                            </div>
+                        </div>
+
+                        <!-- Email Support -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Email Support</h3>
+                                <a href="mailto:port@data.com"
+                                    class="text-sm text-primary-600 font-bold hover:underline">port@data.com</a>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">Response within 2h</p>
+                            </div>
+                        </div>
+
+                        <!-- Live Chat -->
+                        <div
+                            class="bg-white dark:bg-dark-card p-4 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white leading-tight">Live Chat</h3>
+                                <button class="text-sm text-primary-600 font-bold hover:underline">Start Instant
+                                    Chat</button>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wide">Mon-Fri 9AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Lab Address -->
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-primary-600"></i>
+                        <div class="text-sm">
+                            <p class="font-bold text-slate-900 dark:text-white">Main Lab</p>
+                            <p class="text-slate-600 dark:text-slate-400">123 Tech Blvd, Suite 400<br>New York, NY 10001
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-64 relative bg-slate-200 dark:bg-slate-700">
+                        <!-- Static Map Image -->
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <a href="#"
+                                class="bg-white dark:bg-dark-card text-slate-900 dark:text-white px-6 py-2 rounded-full font-bold shadow-xl hover:scale-105 transition flex items-center gap-2">
+                                <i class="fa-solid fa-location-arrow text-primary-600"></i> Open in Maps
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Form -->
+                <div class="lg:w-2/3">
+                    <div
+                        class="bg-white dark:bg-dark-card p-8 md:p-12 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <h2 class="text-3xl font-bold mb-2 text-slate-900 dark:text-white">Start Your Recovery</h2>
+                        <p class="text-slate-600 dark:text-slate-400 mb-8">Fill out the form below for a free
+                            consultation and quote. We respond within 15 minutes.</p>
+
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">First
+                                        Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Last
+                                        Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email
+                                        Address</label>
+                                    <input type="email"
+                                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Phone
+                                        Number</label>
+                                    <input type="tel"
+                                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Device
+                                    Type</label>
+                                <select
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white">
+                                    <option>Select Device...</option>
+                                    <option>Hard Drive (HDD)</option>
+                                    <option>Solid State Drive (SSD)</option>
+                                    <option>RAID / Server</option>
+                                    <option>Mobile Device</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Problem
+                                    Description</label>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
+                                    placeholder="Describe what happened..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                                Request Free Evaluation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Business Hours -->
+    <section class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-primary-600 to-blue-700 text-white p-8 rounded-2xl">
+                    <h2 class="text-2xl font-bold mb-6">Business Hours & Response Times</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold mb-4 text-lg">Support Hours</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Monday - Friday</span>
+                                    <span class="font-bold">9:00 AM - 8:00 PM EST</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Saturday</span>
+                                    <span class="font-bold">10:00 AM - 6:00 PM EST</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Sunday</span>
+                                    <span class="font-bold">12:00 PM - 5:00 PM EST</span>
+                                </div>
+                                <div class="flex justify-between pt-2 border-t border-white/20">
+                                    <span>Emergency Service</span>
+                                    <span class="font-bold text-amber-300">24/7 Available</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold mb-4 text-lg">Response Times</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Email</span>
+                                    <span class="font-bold">Within 2 hours</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Live Chat</span>
+                                    <span class="font-bold">Instant</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Phone</span>
+                                    <span class="font-bold">Immediate</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Form Submission</span>
+                                    <span class="font-bold">Within 15 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-slate-600 dark:text-slate-400">Quick answers to common questions about our services</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">How quickly can you start my recovery?
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400">Emergency cases begin immediately upon arrival.
+                        Standard cases typically start within 24 hours of device receipt.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Do you serve international clients?</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Yes! We serve clients worldwide with secure shipping
+                        options and multilingual support.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">What information do you need to provide a
+                        quote?</h3>
+                    <p class="text-slate-600 dark:text-slate-400">We need the device type, storage capacity, and a brief
+                        description of what happened. No personal data required.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-card p-6 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Is my data secure with you?</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Absolutely. We use bank-level encryption, secure
+                        facilities, and strict privacy policies. Your data never leaves our secure environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Banner -->
+    <section class="py-12 bg-red-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
+                <h2 class="text-2xl font-bold">Emergency Data Loss?</h2>
+            </div>
+            <p class="mb-6 max-w-2xl mx-auto opacity-90">For critical business data loss or time-sensitive situations,
+                call our emergency hotline for immediate assistance.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:8001234567"
+                    class="bg-white text-red-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-phone mr-2"></i> Call Emergency Hotline
+                </a>
+                <a href="upload.html"
+                    class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-red-600 transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-lock mr-2"></i> Upload Files Securely
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-white mb-6">
+                        <i class="fa-solid fa-shield-halved text-primary-500"></i>
+                        <span>DataRecovery</span>
+                    </a>
+                    <p class="text-slate-400 mb-6">Professional data recovery services you can trust. We bring your lost
+                        memories and critical files back to life.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition text-white"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Hard Drive Recovery</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">SSD Data Recovery</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">RAID & Server</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">USB & SD Card</a></li>
+                        <li><a href="services.html" class="hover:text-primary-400 transition">Mobile Recovery</a></li>
+                        <li><a href="services.html"
+                                class="text-accent-400 hover:text-accent-300 transition font-semibold">24/7 Emergency
+                                Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-primary-400 transition">About Us</a></li>
+                        <li><a href="dashboard-client.html" class="hover:text-primary-400 transition">Client Portal</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary-500"></i>
+                            <span>123 Data Recovery Lane,<br>Suite 400, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-primary-500"></i>
+                            <a href="tel:8001234567" class="hover:text-white text-lg font-bold">(800) 123-4567</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-primary-500"></i>
+                            <a href="mailto:port@data.com" class="hover:text-white">port@data.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <div class="text-slate-500">
+                    &copy; 2026 DataRecovery Services. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

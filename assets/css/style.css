@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --primary: #1E40AF;
+    --secondary: #059669;
+    --accent: #F59E0B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slow-zoom {
+    animation: slowZoom 20s linear infinite alternate;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* Utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass {
+    background: rgba(15, 23, 42, 0.7);
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* RTL Support Logic */
+/* RTL Support Logic */
+[dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="rtl"] .fa-solid,
+[dir="rtl"] .fa-regular,
+[dir="rtl"] .fa-brands {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* Fix for specific icons that shouldn't flip if needed, but general flip is good for standard arrows */
+[dir="rtl"] .pl-10 {
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+}
+
+[dir="rtl"] .pr-10 {
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+}
+
+[dir="rtl"] .border-r {
+    border-left: 1px solid;
+    border-right: none;
+}
+
+[dir="rtl"] .border-l {
+    border-right: 1px solid;
+    border-left: none;
+}
